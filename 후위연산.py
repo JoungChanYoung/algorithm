@@ -70,4 +70,4 @@ def solution(S):
     return stack[top-1]    
     pass
 
-print(solution('5 6 + -'))
+print(solution('5 6 + -')) 
