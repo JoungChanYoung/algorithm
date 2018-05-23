@@ -21,3 +21,4 @@ for x in range(len(b)):
         tmp.append(int(b[x]))
 print(len(tmp))
     
+ 
