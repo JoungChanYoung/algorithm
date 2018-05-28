@@ -13,3 +13,5 @@ for i in range(len(li)-1):
             li[j+1] = tmp
 for k in range(len(li)):
     print(li[k])
+
+    
