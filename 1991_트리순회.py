@@ -21,8 +21,10 @@ class BinaryTree(object):
     def _insert_value(self, node, data1, data2, data3):
         if node is None:
             node = Node(data1)
-            node.left = Node(data2)
-            node.right = Node(data3)
+            if data2 != '.':
+                node.left = Node(data2)
+            if data3 != '.':
+                node.right = Node(data3)
         else:
             if data1 != node.data:
                 #삽입할 노드 위치 탐색(재귀)
