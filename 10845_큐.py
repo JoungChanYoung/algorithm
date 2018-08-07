@@ -33,34 +33,34 @@ rear = 0
 
 def push(x):
     global queue,front,rear
-    rear += 1    
+    rear += 1
     queue.append(x)
-    
+
 def pop():
     global queue,front,rear
     if is_empty():
         return -1
     else:
         front_tmp = front
-        queue_tmp = queue[front]  
+        queue_tmp = queue[front]
         front += 1
-        return queue_tmp
-    
+        return int(queue_tmp)
+
 def is_empty():
     global queue,front,rear
     return int(rear==front)
 
-def front_pop():
+def check_front():
     global queue,front,rear
     if is_empty():
-        print(-1)
+        return -1
     else:
         return int(queue[front])
 
-def back():
+def check_back():
     global queue,front,rear
     if is_empty():
-        print(-1)
+        return -1
     else:
         return int(queue[-1])
 
@@ -68,25 +68,24 @@ def size():
     if is_empty():
         return 0
     else:
-        return (len(queue))
+        return (len(queue[front:]))
 
-for x in range(len(order)): 
+for x in range(len(order)):
+    # print('order[x]',order[x],'queue',queue,'rear',rear,'front',front)
     if "push" in order[x]:
-        push(int(list(order[x])[-1]))
+        push(order[x].split(" ")[-1])
 
     elif order[x] == "pop":
         print(pop())
-        
+
     elif order[x] == "front":
-        print(front_pop())
+        print(check_front())
 
     elif order[x] == "empty":
         print(is_empty())
 
     elif order[x] == "size":
         print(size())
-        
+
     elif order[x] == "back":
-        print(back())
-
-
+        print(check_back())
