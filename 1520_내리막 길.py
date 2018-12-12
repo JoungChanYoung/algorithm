@@ -15,12 +15,12 @@ direction_x = [0, 1, 0, -1]
 direction_y = [1, 0, -1, 0]
 
 def func(x, y):
-    if y == row-1 and x == col-1 :
+    if y == row-1 and x == col-1 : #finish point
         return 1
-    if dp[y][x] is not -1:
+    if dp[y][x] is not -1: #visited
         return dp[y][x]
     dp[y][x] = 0
-    for i in range(4):
+    for i in range(4): #unvisited
         nx = x + direction_x[i]
         ny = y + direction_y[i]
         if nx < 0 or nx >= col or ny < 0 or ny >= row:
