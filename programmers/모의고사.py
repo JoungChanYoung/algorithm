@@ -1,4 +1,3 @@
-
 def solution(answers):
     answer = []
     pattern1 = [1,2,3,4,5]
