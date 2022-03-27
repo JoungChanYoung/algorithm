@@ -22,7 +22,7 @@ def solution(bridge_length, weight, truck_weights):
             curr = truck_weights[0]
             if (bridge_weight + curr > weight): #다리 총무게 때문에 안되는 경우
                 continue
-            else: #되는 경우            
+            else: #되는 경우
                 bridge[0] = truck_weights.pop(0)
                 bridge_weight += bridge[0]
     answer = count
