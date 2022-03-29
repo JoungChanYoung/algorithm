@@ -1,6 +1,5 @@
 #level2
 
-
 def solution(citations):
     answer = 0
     
